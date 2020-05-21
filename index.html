@@ -6,16 +6,21 @@
   <title>Paszporty Roślin - Robinia</title>
 </head>
 <body>
-  <main>
-    <section>
-      <h2>Dodaj paszport</h2>
-      <input type="text" placeholder="Roślina">
-      <input type="number" placeholder="Ilość sztuk">
-      <input type="text" placeholder="Id">
-      <button>Dodaj</button>
+  <main class="main">
+    <section class="add-passport">
+      <h2 class="add-passport__header">Dodaj paszport</h2>
+        <form action="">
+          <input class="add-passport__input" id="input-plant" type="text" placeholder="Roślina" required>
+          <input class="add-passport__input" id="input-amount" type="number" placeholder="Ilość sztuk">
+          <input class="add-passport__input" id="input-id" type="text" placeholder="Id">
+          <button class="add-passport" id="button-add">Dodaj</button>
+        </form>
     </section>
-    <button>Importuj do PDF</button>
-    <button>Wyczyść wszystko</button>
+    <div class="passports">
+      <button class="passports__button--import" id="button-import">Importuj do PDF</button>
+      <button class="passports__button--clear" id="button-clear">Wyczyść wszystko</button>
+      <div id="passports-box"></div>
+    </div>
   </main>
   <script src="main.js"></script>
 </body>
