@@ -4,11 +4,9 @@ const inputPlant = document.getElementById('input-plant');
 const inputAmount = document.getElementById('input-amount');
 const inputId = document.getElementById('input-id');
 const buttonAdd = document.getElementById('button-add');
+const buttonClear = document.getElementById('button-clear');
 const passportsBox = document.getElementById('passports-box');
 
-// function addPassport(e) {
-//   console.log(e.target)
-// }
 
 const passportsList = [
   {id: 'P1/b001', plantName: 'Berberys thumberge', amount: 5}
@@ -16,7 +14,7 @@ const passportsList = [
 
 let actualPassport = {id: '', plantName: '', amount: ''};
 
-inputPlant.addEventListener('change', (e) => actualPassport = {...actualPassport, plantName: e.target.value});
+inputPlant.addEventListener('change', (e) => actualPassport = {...actualPassport, plantName: (e.target.value)[0].toUpperCase() + (e.target.value).slice(1)});
 inputAmount.addEventListener('change', (e) => actualPassport = {...actualPassport, amount: e.target.value});
 inputId.addEventListener('change', (e) => actualPassport = {...actualPassport, id: e.target.value});
 
@@ -30,12 +28,11 @@ function clearForm() {
 buttonAdd.addEventListener('click', (e) => {
   e.preventDefault();
   passportsList.push(actualPassport)
-
-  const test = passportsList.map((passport) => {
+  const passportsTables = passportsList.map((passport) => {
     return `
       <p>${passport.plantName}  ${passport.amount}szt. ${passport.id}</p>
-      <table>
-        <theader>Paszport Roślin \ Plant Passport</theader>
+      <table class="table">
+        <theader><img src="assets/flag-of-europe.svg" class="table__flag"/>Paszport Roślin \ Plant Passport</theader>
         <tr>
           <td>A</td>
           <td>${passport.plantName}</td>
@@ -52,8 +49,11 @@ buttonAdd.addEventListener('click', (e) => {
       <hr>
     `;
   });
-
-  passportsBox.innerHTML = `${test.join('')}`
-
+  passportsBox.innerHTML = `${passportsTables.join('')}`
   clearForm();
 });
+
+buttonClear.addEventListener('click', () => {
+  passportsList.length = 0;
+  passportsBox.innerHTML = '';
+})

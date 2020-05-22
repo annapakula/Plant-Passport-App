@@ -1,0 +1,55 @@
+.main {
+  font-family: Calibri, Arial, sans-serif;
+}
+
+.add-passport__button, .add-passport__input {
+  padding: .5rem;
+  margin-right: 1rem;
+  
+}
+.add-passport__button {
+  /* width: 32px; */
+  /* height: 32px; */
+  font-size: 2rem;
+  padding: .7rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  background: none;
+}
+.add-passport__button::before {
+  content: '';
+  position: absolute;
+  background: green;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  left: 12%;
+  top: 22%;
+  z-index: -1;
+}
+
+.passports__button {
+  padding: .8rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+.passports__button--import {
+  border: 2px solid darkslategray;
+}
+.passports__button--clear {
+  background: rgb(255, 52, 52);
+  color: #fff;
+}
+
+.table {
+
+}
+
+.table__flag {
+  width: 60px;
+}
