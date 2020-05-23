@@ -30,20 +30,20 @@ buttonAdd.addEventListener('click', (e) => {
   passportsList.push(actualPassport)
   const passportsTables = passportsList.map((passport) => {
     return `
-      <p>${passport.plantName}  ${passport.amount}szt. ${passport.id}</p>
+      <p>${passport.plantName} &#160; ${passport.amount}szt. &#160; ${passport.id}</p>
       <table class="table">
-        <theader><img src="assets/flag-of-europe.svg" class="table__flag"/>Paszport Roślin \ Plant Passport</theader>
+        <theader class="table__header"><img src="assets/flag-of-europe.svg" class="table__flag"/>Paszport Roślin &#92; Plant Passport</theader>
         <tr>
-          <td>A</td>
-          <td>${passport.plantName}</td>
-          <td>B</td>
-          <td>PL-18/62/5804</td>
+          <td class="table__cell table__cell--letter">A</td>
+          <td class="table__cell table__cell--data">${passport.plantName}</td>
+          <td class="table__cell table__cell--letter">B</td>
+          <td class="table__cell table__cell--data">PL-18/62/5804</td>
         </tr>
         <tr>
-          <td>C</td>
-          <td>${passport.id}</td>
-          <td>D</td>
-          <td>PL</td>
+          <td class="table__cell table__cell--letter">C</td>
+          <td class="table__cell table__cell--data">${passport.id}</td>
+          <td class="table__cell table__cell--letter">D</td>
+          <td class="table__cell table__cell--data">PL</td>
         </tr>
       </table>
       <hr>

@@ -2,22 +2,27 @@
   font-family: Calibri, Arial, sans-serif;
 }
 
+.add-passport__form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .add-passport__button, .add-passport__input {
   padding: .5rem;
-  margin-right: 1rem;
+  margin: 0 1rem 1rem 0;
   
 }
 .add-passport__button {
-  /* width: 32px; */
-  /* height: 32px; */
+  width: 32px;
   font-size: 2rem;
-  padding: .7rem;
+  padding: 0;
   border: none;
   cursor: pointer;
   color: #fff;
-  font-weight: bold;
-  position: relative;
   background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .add-passport__button::before {
   content: '';
@@ -26,14 +31,16 @@
   border-radius: 50%;
   width: 32px;
   height: 32px;
-  left: 12%;
-  top: 22%;
   z-index: -1;
 }
 
+.passports {
+  width: 575px;
+}
 .passports__button {
   padding: .8rem;
   margin-right: 1rem;
+  margin-bottom: 1rem;
   cursor: pointer;
   border: none;
   border-radius: 4px;
@@ -46,10 +53,29 @@
   color: #fff;
 }
 
-.table {
+.passports__box {
 
 }
-
+.table {
+  font-weight: 600;
+  width: 100%;
+}
+.table__header {
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: flex;
+}
+.table__cell {
+  padding: 6px;
+  /* border: 1px solid black; */
+}
+.table__cell--letter {
+  width: 5%;
+}
+.table__cell--data {
+  width: 45%;
+}
 .table__flag {
   width: 60px;
+  margin-right: 1rem;
 }
