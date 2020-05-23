@@ -39,7 +39,7 @@
 }
   
 .passports {
-  // max-width: 595px;
+  width: 595px;
   // width: 100%;
 
   &__button {
@@ -64,8 +64,12 @@
 }
 
 .passport {
-  padding: 1rem;
+  padding: .3rem;
   border: 1px solid black;
+  &__paragraph {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
 }
 
 .table {
@@ -76,9 +80,9 @@
     font-size: 1.2rem;
     display: flex;
   }
-  &__cell {
-    padding: 6px;
-  }
+  // &__cell {
+  //   // padding: 6px;
+  // }
   &__cell--letter {
     width: 5%;
   }

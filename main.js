@@ -29,8 +29,8 @@ buttonAdd.addEventListener('click', (e) => {
   passportsList.push(actualPassport)
   const passportsTables = passportsList.map((passport) => {
     return `
-      <div class="passport">
-        <p>${passport.plantName} &#160; ${passport.amount}szt.</p>
+    <p class="passport__paragraph">${passport.plantName} &#160; ${passport.amount}szt.</p>
+    <div class="passport">
         <table class="table">
           <theader class="table__header"><img src="assets/img/flag-of-europe.svg" class="table__flag"/>Paszport Roślin &#92; Plant Passport</theader>
           <tr>
