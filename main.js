@@ -29,23 +29,24 @@ buttonAdd.addEventListener('click', (e) => {
   passportsList.push(actualPassport)
   const passportsTables = passportsList.map((passport) => {
     return `
-      <p>${passport.plantName} &#160; ${passport.amount}szt. &#160; ${passport.id}</p>
-      <table class="table">
-        <theader class="table__header"><img src="assets/img/flag-of-europe.svg" class="table__flag"/>Paszport Roślin &#92; Plant Passport</theader>
-        <tr>
-          <td class="table__cell table__cell--letter">A</td>
-          <td class="table__cell table__cell--data">${passport.plantName}</td>
-          <td class="table__cell table__cell--letter">B</td>
-          <td class="table__cell table__cell--data">PL-18/62/5804</td>
-        </tr>
-        <tr>
-          <td class="table__cell table__cell--letter">C</td>
-          <td class="table__cell table__cell--data">${passport.id}</td>
-          <td class="table__cell table__cell--letter">D</td>
-          <td class="table__cell table__cell--data">PL</td>
-        </tr>
-      </table>
-      <hr>
+      <div class="passport">
+        <p>${passport.plantName} &#160; ${passport.amount}szt.</p>
+        <table class="table">
+          <theader class="table__header"><img src="assets/img/flag-of-europe.svg" class="table__flag"/>Paszport Roślin &#92; Plant Passport</theader>
+          <tr>
+            <td class="table__cell table__cell--letter">A</td>
+            <td class="table__cell table__cell--data">${passport.plantName}</td>
+            <td class="table__cell table__cell--letter">B</td>
+            <td class="table__cell table__cell--data">PL-18/62/5804</td>
+          </tr>
+          <tr>
+            <td class="table__cell table__cell--letter">C</td>
+            <td class="table__cell table__cell--data">${passport.id}</td>
+            <td class="table__cell table__cell--letter">D</td>
+            <td class="table__cell table__cell--data">PL</td>
+          </tr>
+        </table>
+      </div>
     `;
   });
   passportsBox.innerHTML = `${passportsTables.join('')}`
@@ -58,8 +59,8 @@ buttonClear.addEventListener('click', (e) => {
   passportsBox.innerHTML = '';
 })
 
-buttonPrint.addEventListener('click', (e) => {
-  e.preventDefault();
+buttonPrint.addEventListener('click', () => {
+  // e.preventDefault();
   window.print();
   inputPlant.focus();
   return false;

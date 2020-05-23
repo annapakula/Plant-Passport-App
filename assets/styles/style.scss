@@ -39,7 +39,8 @@
 }
   
 .passports {
-  width: 575px;
+  // max-width: 595px;
+  // width: 100%;
 
   &__button {
     padding: .8rem;
@@ -59,10 +60,13 @@
   }
 
   // &__box {
-
   // }
 }
 
+.passport {
+  padding: 1rem;
+  border: 1px solid black;
+}
 
 .table {
   font-weight: 600;

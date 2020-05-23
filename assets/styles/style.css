@@ -47,10 +47,6 @@
   z-index: -1;
 }
 
-.passports {
-  width: 575px;
-}
-
 .passports__button {
   padding: .8rem;
   margin-right: 1rem;
@@ -67,6 +63,11 @@
 .passports__button--clear {
   background: #ff3434;
   color: #fff;
+}
+
+.passport {
+  padding: 1rem;
+  border: 1px solid black;
 }
 
 .table {
