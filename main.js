@@ -5,12 +5,11 @@ const inputAmount = document.getElementById('input-amount');
 const inputId = document.getElementById('input-id');
 const buttonAdd = document.getElementById('button-add');
 const buttonClear = document.getElementById('button-clear');
+const buttonPrint = document.getElementById('button-print');
 const passportsBox = document.getElementById('passports-box');
 
 
-const passportsList = [
-  {id: 'P1/b001', plantName: 'Berberys thumberge', amount: 5}
-];
+const passportsList = [];
 
 let actualPassport = {id: '', plantName: '', amount: ''};
 
@@ -32,7 +31,7 @@ buttonAdd.addEventListener('click', (e) => {
     return `
       <p>${passport.plantName} &#160; ${passport.amount}szt. &#160; ${passport.id}</p>
       <table class="table">
-        <theader class="table__header"><img src="assets/flag-of-europe.svg" class="table__flag"/>Paszport Roślin &#92; Plant Passport</theader>
+        <theader class="table__header"><img src="assets/img/flag-of-europe.svg" class="table__flag"/>Paszport Roślin &#92; Plant Passport</theader>
         <tr>
           <td class="table__cell table__cell--letter">A</td>
           <td class="table__cell table__cell--data">${passport.plantName}</td>
@@ -53,7 +52,15 @@ buttonAdd.addEventListener('click', (e) => {
   clearForm();
 });
 
-buttonClear.addEventListener('click', () => {
+buttonClear.addEventListener('click', (e) => {
+  e.preventDefault();
   passportsList.length = 0;
   passportsBox.innerHTML = '';
+})
+
+buttonPrint.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.print();
+  inputPlant.focus();
+  return false;
 })

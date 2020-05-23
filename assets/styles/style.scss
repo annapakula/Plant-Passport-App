@@ -1,0 +1,97 @@
+.main {
+  font-family: Calibri, Arial, sans-serif;
+}
+
+.add-passport{
+
+  &__form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__button, &__input {
+    padding: .5rem;
+    margin: 0 1rem 1rem 0;
+    
+  }
+  &__button {
+    width: 32px;
+    font-size: 2rem;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: green;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      z-index: -1;
+    }
+  }
+}
+  
+.passports {
+  width: 575px;
+
+  &__button {
+    padding: .8rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+
+    &--print {
+      border: 2px solid darkslategray;
+    }
+    &--clear {
+      background: rgb(255, 52, 52);
+      color: #fff;
+    }
+  }
+
+  // &__box {
+
+  // }
+}
+
+
+.table {
+  font-weight: 600;
+  width: 100%;
+  &__header {
+    font-weight: 600;
+    font-size: 1.2rem;
+    display: flex;
+  }
+  &__cell {
+    padding: 6px;
+  }
+  &__cell--letter {
+    width: 5%;
+  }
+  &__cell--data {
+    width: 45%;
+  }
+  &__flag {
+    width: 60px;
+    margin-right: 1rem;
+  }
+}
+
+@media print {
+  .add-passport {
+    display: none;
+  }
+  .passports__button {
+    display: none;
+  }
+}
