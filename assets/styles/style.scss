@@ -96,10 +96,7 @@
 }
 
 @media print {
-  .add-passport {
-    display: none;
-  }
-  .passports__button {
+  .no-print {
     display: none;
   }
 }

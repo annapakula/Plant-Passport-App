@@ -9,24 +9,26 @@ const buttonPrint = document.getElementById('button-print');
 const passportsBox = document.getElementById('passports-box');
 
 
-const passportsList = [];
-
-let actualPassport = {id: '', plantName: '', amount: ''};
+let passportsList = [];
+let actualPassport = {id: '', plantName: '', amount: 0, plantId: ''};
 
 inputPlant.addEventListener('change', (e) => actualPassport = {...actualPassport, plantName: (e.target.value)[0].toUpperCase() + (e.target.value).slice(1)});
 inputAmount.addEventListener('change', (e) => actualPassport = {...actualPassport, amount: e.target.value});
-inputId.addEventListener('change', (e) => actualPassport = {...actualPassport, id: e.target.value});
+inputId.addEventListener('change', (e) => actualPassport = {...actualPassport, plantId: e.target.value});
 
 function clearForm() {
   inputPlant.value = null;
   inputAmount.value = null;
   inputId.value = null;
-  actualPassport = {id: '', plantName: '', amount: ''};
+  actualPassport = {id: '', plantName: '', amount: 0, plantId: ''};
 }
 
-buttonAdd.addEventListener('click', (e) => {
-  e.preventDefault();
-  passportsList.push(actualPassport)
+function handleDeletePassport(id) {
+  passportsList = passportsList.filter(passport => passport.id !== id)
+  showPassports();
+}
+
+function showPassports() {
   const passportsTables = passportsList.map((passport) => {
     return `
     <p class="passport__paragraph">${passport.plantName} &#160; ${passport.amount}szt.</p>
@@ -41,16 +43,29 @@ buttonAdd.addEventListener('click', (e) => {
           </tr>
           <tr>
             <td class="table__cell table__cell--letter">C</td>
-            <td class="table__cell table__cell--data">${passport.id}</td>
+            <td class="table__cell table__cell--data">${passport.plantId}</td>
             <td class="table__cell table__cell--letter">D</td>
             <td class="table__cell table__cell--data">PL</td>
           </tr>
         </table>
       </div>
+      <button class="no-print" onclick="handleDeletePassport('${passport.id}')">Usuń</button>
+      <button class="no-print">Edytuj</button>
     `;
   });
   passportsBox.innerHTML = `${passportsTables.join('')}`
-  clearForm();
+}
+
+buttonAdd.addEventListener('click', (e) => {
+  e.preventDefault();
+  actualPassport = {...actualPassport, id: uuid.v4()}
+  // if(inputPlant.value !== '' & inputId.value !== '') {
+    passportsList.push(actualPassport)
+    showPassports();
+    clearForm();
+    
+    // }
+    inputPlant.focus();
 });
 
 buttonClear.addEventListener('click', (e) => {
@@ -60,8 +75,6 @@ buttonClear.addEventListener('click', (e) => {
 })
 
 buttonPrint.addEventListener('click', () => {
-  // e.preventDefault();
   window.print();
-  inputPlant.focus();
   return false;
-})
+});

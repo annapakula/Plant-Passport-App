@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paszporty Roślin - Robinia</title>
   <link rel="stylesheet" href="assets/styles/style.css"></style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js"></script>
 </head>
 <body>
   <main class="main">
-    <section class="add-passport">
+    <section class="add-passport no-print">
       <h2 class="add-passport__header">Dodaj paszport</h2>
-        <form class="add-passport__form" action="#">
+        <form class="add-passport__form" action="">
           <input class="add-passport__input" id="input-plant" type="text" placeholder="Roślina" required>
-          <input class="add-passport__input" id="input-amount" type="number" min="1" placeholder="Ilość sztuk">
-          <input class="add-passport__input" id="input-id" type="text" placeholder="Id">
-          <button class="add-passport__button" id="button-add">+</button>
+          <input class="add-passport__input" id="input-amount" type="number" min="1" placeholder="Ilość sztuk" required>
+          <input class="add-passport__input" id="input-id" type="text" placeholder="Id" required>
+          <button class="add-passport__button" id="button-add" type="submit">+</button>
         </form>
     </section>
     <br>
     <section class="passports">
-      <button class="passports__button passports__button--print" id="button-print">Drukuj</button>
-      <button class="passports__button passports__button--clear" id="button-clear">Wyczyść wszystko</button>
+      <button class="passports__button passports__button--print no-print" id="button-print">Drukuj</button>
+      <button class="passports__button passports__button--clear no-print" id="button-clear">Wyczyść wszystko</button>
       <div class="passports__box" id="passports-box"></div>
     </section>
   </main>
