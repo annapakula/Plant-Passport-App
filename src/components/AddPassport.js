@@ -1,8 +1,15 @@
 import React from "react";
-import '../styles/AddPassport.scss';
+import "../styles/AddPassport.scss";
+import AddPlantVariety from "./AddPlantVariety";
 
 // class AddPassport extends
-const AddPassport = ({handleChange, handleAddPlant}) => {
+const AddPassport = ({
+  handleChange,
+  handleAddPlant,
+  handleAddVariety,
+  handleChangeActualVariety,
+  actualPassport,
+}) => {
   return (
     <section className="add-passport no-print">
       <h2 className="add-passport__header">Dodaj paszport</h2>
@@ -16,21 +23,47 @@ const AddPassport = ({handleChange, handleAddPlant}) => {
         />
         <input
           className="add-passport__input"
-          id="amount"
-          type="number"
-          min="1"
-          placeholder="Ilość sztuk"
-          onChange={handleChange}
-        />
-        <input
-          className="add-passport__input"
           id="plantId"
           type="text"
           placeholder="Id"
           onChange={handleChange}
         />
-        <button className="add-passport__button" id="button-add" type="submit" onClick={handleAddPlant}>
-          +
+        <input
+          className="add-passport__input"
+          id="plantAmount"
+          type="number"
+          min="1"
+          placeholder="Ilość sztuk"
+          onChange={handleChange}
+        />
+        <br />
+
+        <AddPlantVariety
+          handleChangeActualVariety={handleChangeActualVariety}
+          handleAddVariety={handleAddVariety}
+        />
+        <br />
+        {actualPassport.plantVarieties ? (
+          actualPassport.plantVarieties.map((variety) => {
+            return (
+              <p>
+                {actualPassport.plantName} {variety.varietyName}{" "}
+                {variety.varietyAmount}
+              </p>
+            );
+          })
+        ) : (
+          <p>
+            {actualPassport.plantName} {actualPassport.plantAmount}
+          </p>
+        )}
+        <button
+          className="add-passport__button"
+          id="button-add"
+          type="submit"
+          onClick={handleAddPlant}
+        >
+          Dodaj paszport
         </button>
       </form>
     </section>

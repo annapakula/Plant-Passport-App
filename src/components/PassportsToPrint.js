@@ -7,13 +7,26 @@ const PassportsToPrint = ({ passportsList, handleDeletePassport }) => {
   // const handleCancelEdit = (id) => {};
   // const handleConfirmEdit = () => {};
   // const handleEditPassport = () => {};
+  // const varieties = passportsList.map(passport)
 
   return passportsList.map((passport) => {
     return (
       <div key={passport.id} className="PassportsToPrint">
-        <p className="passport__paragraph">
-          {passport.plantName} &#160; {passport.amount}szt.
-        </p>
+        {passport.plantVarieties.length !== 0 ? (
+          passport.plantVarieties.map((variety) => {
+            console.log(variety);
+            return (
+              <p className="passport__paragraph">
+                {passport.plantName} {variety.varietyName} &#160;{" "}
+                {variety.varietyAmount}szt.
+              </p>
+            );
+          })
+        ) : (
+          <p className="passport__paragraph">
+            {passport.plantName} &#160; {passport.plantAmount}szt.
+          </p>
+        )}
         <div className="passport__box">
           <div className="passport">
             <table className="table">
