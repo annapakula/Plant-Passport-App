@@ -1,0 +1,41 @@
+
+.table {
+  font-weight: 600;
+  width: 100%;
+  table-layout: fixed;
+  tr {
+    display: flex;
+    width: 100%;
+    padding: 0 1px;
+  }
+  &__head-cell {
+    display: flex;
+  }
+  &__header {
+    font-weight: 600;
+    display: inline;
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  &__cell--letter {
+    width: 5%;
+  }
+  &__cell--data {
+    width: 45%;
+    height: fit-content;
+    text-overflow: clip;
+  }
+  &__flag {
+    width: 60px;
+    margin-right: 1rem;
+  }
+}
+
+.passport {
+  width: 100%;
+  padding: 1px;
+  border: 1px solid black;
+  &__paragraph {
+    margin: 5px 0 4px;
+  }
+}
