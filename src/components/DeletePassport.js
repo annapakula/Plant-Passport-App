@@ -5,9 +5,7 @@ const DeletePassport = ({ handleDeletePassport }) => {
     <button
       className="passport__delete-button no-print"
       onClick={handleDeletePassport}
-    >
-      Usuń
-    </button>
+    ></button>
   );
 };
 

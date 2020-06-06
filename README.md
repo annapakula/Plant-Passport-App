@@ -1,8 +1,8 @@
 # To do:
-✅ Import do pdf / drukowanie
-✅ Czyszczenie wszystkiego
+- ✅ Import do pdf / drukowanie
+- ✅ Czyszczenie wszystkiego
+- ✅ Usuwanie poszczególnych paszportów
 - LocalSession
-✅ Usuwanie poszczególnych paszportów
 - Edycja poszczególnych paszportów
 - API
 - Id samo się uzupełnia po wpisaniu rośliny
