@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "860afade0363883669205b027e292271",
+    "revision": "ac62e1dc67293379b542584a20f6347c",
     "url": "/Plant-Passport-App/index.html"
   },
   {
-    "revision": "de8599752ee51d5e5b1a",
-    "url": "/Plant-Passport-App/static/css/main.99f8a2ca.chunk.css"
+    "revision": "89df30ba18443f4941c6",
+    "url": "/Plant-Passport-App/static/css/main.ab3c3845.chunk.css"
   },
   {
     "revision": "c4ef205fc0b7a2fe2d22",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Plant-Passport-App/static/js/2.b4cbcbe3.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "de8599752ee51d5e5b1a",
-    "url": "/Plant-Passport-App/static/js/main.989ec13b.chunk.js"
+    "revision": "89df30ba18443f4941c6",
+    "url": "/Plant-Passport-App/static/js/main.4cb807eb.chunk.js"
   },
   {
     "revision": "fd0ea2737e2b5a2fe65e",
