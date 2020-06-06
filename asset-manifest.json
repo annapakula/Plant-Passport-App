@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Plant-Passport-App/static/css/main.fd8b55b8.chunk.css",
+    "main.js": "/Plant-Passport-App/static/js/main.73c274f8.chunk.js",
+    "main.js.map": "/Plant-Passport-App/static/js/main.73c274f8.chunk.js.map",
+    "runtime-main.js": "/Plant-Passport-App/static/js/runtime-main.18092e10.js",
+    "runtime-main.js.map": "/Plant-Passport-App/static/js/runtime-main.18092e10.js.map",
+    "static/js/2.b4cbcbe3.chunk.js": "/Plant-Passport-App/static/js/2.b4cbcbe3.chunk.js",
+    "static/js/2.b4cbcbe3.chunk.js.map": "/Plant-Passport-App/static/js/2.b4cbcbe3.chunk.js.map",
+    "index.html": "/Plant-Passport-App/index.html",
+    "precache-manifest.1240b556a8eb19b6219c42de362f683e.js": "/Plant-Passport-App/precache-manifest.1240b556a8eb19b6219c42de362f683e.js",
+    "service-worker.js": "/Plant-Passport-App/service-worker.js",
+    "static/css/main.fd8b55b8.chunk.css.map": "/Plant-Passport-App/static/css/main.fd8b55b8.chunk.css.map",
+    "static/js/2.b4cbcbe3.chunk.js.LICENSE.txt": "/Plant-Passport-App/static/js/2.b4cbcbe3.chunk.js.LICENSE.txt",
+    "static/media/flag-of-europe.svg": "/Plant-Passport-App/static/media/flag-of-europe.7b4534d2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.18092e10.js",
+    "static/js/2.b4cbcbe3.chunk.js",
+    "static/css/main.fd8b55b8.chunk.css",
+    "static/js/main.73c274f8.chunk.js"
+  ]
+}
