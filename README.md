@@ -2,8 +2,13 @@
 - ✅ Import do pdf / drukowanie
 - ✅ Czyszczenie wszystkiego
 - ✅ Usuwanie poszczególnych paszportów
-- LocalSession
+- ✅ Dodawanie odmian do jednego paszportu
+- ✅ Poprawienie drukowania
 - Edycja poszczególnych paszportów
+- LocalSession
 - API
 - Id samo się uzupełnia po wpisaniu rośliny
 - Alert - czy na pewno chcesz usunąć wszystko?
+- Wygląd
+- Copyrights
+- Poprawne README
