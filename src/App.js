@@ -119,7 +119,7 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <div>
+        <div className="App__box">
           <AddPassport
             handleChange={this.handleChange}
             handleAddPlant={this.handleAddPlant}
@@ -137,6 +137,7 @@ class App extends Component {
             />
           </section>
         </div>
+        <footer className="footer no-print">Copyright © 2020 Anna Mazurek</footer>
       </main>
     );
   }
