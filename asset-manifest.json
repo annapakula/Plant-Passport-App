@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Plant-Passport-App/static/css/main.ab3c3845.chunk.css",
-    "main.js": "/Plant-Passport-App/static/js/main.4cb807eb.chunk.js",
-    "main.js.map": "/Plant-Passport-App/static/js/main.4cb807eb.chunk.js.map",
+    "main.css": "/Plant-Passport-App/static/css/main.5c9520ad.chunk.css",
+    "main.js": "/Plant-Passport-App/static/js/main.0e061801.chunk.js",
+    "main.js.map": "/Plant-Passport-App/static/js/main.0e061801.chunk.js.map",
     "runtime-main.js": "/Plant-Passport-App/static/js/runtime-main.18092e10.js",
     "runtime-main.js.map": "/Plant-Passport-App/static/js/runtime-main.18092e10.js.map",
     "static/js/2.b4cbcbe3.chunk.js": "/Plant-Passport-App/static/js/2.b4cbcbe3.chunk.js",
     "static/js/2.b4cbcbe3.chunk.js.map": "/Plant-Passport-App/static/js/2.b4cbcbe3.chunk.js.map",
     "index.html": "/Plant-Passport-App/index.html",
-    "precache-manifest.32eee819368a6cb29cf23e2dc38d685d.js": "/Plant-Passport-App/precache-manifest.32eee819368a6cb29cf23e2dc38d685d.js",
+    "precache-manifest.50b5a111e8513cb7065b8c1cdc14109e.js": "/Plant-Passport-App/precache-manifest.50b5a111e8513cb7065b8c1cdc14109e.js",
     "service-worker.js": "/Plant-Passport-App/service-worker.js",
-    "static/css/main.ab3c3845.chunk.css.map": "/Plant-Passport-App/static/css/main.ab3c3845.chunk.css.map",
+    "static/css/main.5c9520ad.chunk.css.map": "/Plant-Passport-App/static/css/main.5c9520ad.chunk.css.map",
     "static/js/2.b4cbcbe3.chunk.js.LICENSE.txt": "/Plant-Passport-App/static/js/2.b4cbcbe3.chunk.js.LICENSE.txt",
     "static/media/PassportsToPrint.scss": "/Plant-Passport-App/static/media/delete.66f739d1.svg",
     "static/media/flag-of-europe.svg": "/Plant-Passport-App/static/media/flag-of-europe.7b4534d2.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.18092e10.js",
     "static/js/2.b4cbcbe3.chunk.js",
-    "static/css/main.ab3c3845.chunk.css",
-    "static/js/main.4cb807eb.chunk.js"
+    "static/css/main.5c9520ad.chunk.css",
+    "static/js/main.0e061801.chunk.js"
   ]
 }
