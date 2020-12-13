@@ -137,7 +137,7 @@ class App extends Component {
             />
           </section>
         </div>
-        <footer className="footer no-print">Copyright © 2020 Anna Mazurek</footer>
+        <footer className="footer no-print">Copyright © 2020 Anna Pakuła</footer>
       </main>
     );
   }
