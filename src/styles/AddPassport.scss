@@ -1,11 +1,14 @@
 .add-passport{
-
+  &__header {
+    font-weight: 600;
+  }
   &__form {
     // display: flex;
     // align-items: center;
     // flex-wrap: wrap;
   }
-  &__button, &__input {
+  // &__button, &__input {
+  &__input {
     padding: .5rem;
     margin: 0 1rem 1rem 0;
     

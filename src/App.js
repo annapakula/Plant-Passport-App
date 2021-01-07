@@ -131,6 +131,7 @@ class App extends Component {
           <section className="passports">
             <Print handlePrint={this.handlePrint} />
             <ClearAll handleClearAll={this.handleClearAll} />
+            <hr className="no-print" />
             <PassportsToPrint
               passportsList={this.state.passportsList}
               handleDeletePassport={this.handleDeletePassport}

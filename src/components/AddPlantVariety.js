@@ -18,7 +18,7 @@ const AddPlantVariety = ({ handleChangeActualVariety, handleAddVariety }) => {
         placeholder="Ilość sztuk"
         onChange={handleChangeActualVariety}
       />
-      <button onClick={handleAddVariety}>Dodaj odmianę</button>
+      <button className="button" onClick={handleAddVariety}>Dodaj odmianę</button>
     </div>
   );
 };

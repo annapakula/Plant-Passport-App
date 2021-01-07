@@ -1,11 +1,16 @@
 .PassportsToPrint {
   width: 100%;
   break-inside: avoid-page;
+  padding: 1rem;
+  &:hover {
+    background: rgba(8, 6, 17, 0.267);
+  }
 }
 .table {
   font-weight: 600;
   width: 100%;
   table-layout: fixed;
+  color: #000;
   tr {
     display: flex;
     width: 100%;
@@ -38,6 +43,7 @@
   width: 100%;
   padding: 1px;
   border: 1px solid black;
+  background: #fff;
   &__paragraph {
     margin: 5px 0 4px;
   }
@@ -46,8 +52,7 @@
     width: 32px;
     height: 32px;
     background: url('../icons/delete.svg') center center no-repeat;
-    border: 1.5px solid #ff3434;
-    border-radius: 50%;
+    border: none;
     cursor: pointer;
   }
   &__box {

@@ -13,6 +13,7 @@ const AddPassport = ({
   return (
     <section className="add-passport no-print">
       <h2 className="add-passport__header">Dodaj paszport</h2>
+      <small>Dane rośliny:</small>
       <form className="add-passport__form" action="">
         <input
           className="add-passport__input"
@@ -38,6 +39,7 @@ const AddPassport = ({
         />
         <br />
 
+        <small>Odmiana rośliny (opcjonalnie):</small>
         <AddPlantVariety
           handleChangeActualVariety={handleChangeActualVariety}
           handleAddVariety={handleAddVariety}
@@ -58,7 +60,7 @@ const AddPassport = ({
           </p>
         )}
         <button
-          className="add-passport__button"
+          className="button"
           id="button-add"
           type="submit"
           onClick={handleAddPlant}

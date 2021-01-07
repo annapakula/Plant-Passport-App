@@ -1,10 +1,14 @@
 body {
   margin: 0;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(to right top, #051937, #0a2040, #102849, #152f53, #1a375c);
+  background-attachment: fixed;
+  color: #fff;
 }
 
 code {
@@ -13,6 +17,9 @@ code {
 }
 
 @media print {
+  .App {
+    color: #000;
+  }
   .no-print {
     display: none;
   }
