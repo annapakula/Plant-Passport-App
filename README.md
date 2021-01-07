@@ -1,3 +1,5 @@
+Aplikacja została stworzona na potrzeby gospodarstwa ogrodniczego; służy do generowania paszportów roślin.
+
 # To do:
 - ✅ Import do pdf / drukowanie
 - ✅ Czyszczenie wszystkiego
