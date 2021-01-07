@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Plant-Passport-App/static/css/main.5c9520ad.chunk.css",
-    "main.js": "/Plant-Passport-App/static/js/main.cf2ecf96.chunk.js",
-    "main.js.map": "/Plant-Passport-App/static/js/main.cf2ecf96.chunk.js.map",
+    "main.css": "/Plant-Passport-App/static/css/main.45254350.chunk.css",
+    "main.js": "/Plant-Passport-App/static/js/main.3ff2eb0e.chunk.js",
+    "main.js.map": "/Plant-Passport-App/static/js/main.3ff2eb0e.chunk.js.map",
     "runtime-main.js": "/Plant-Passport-App/static/js/runtime-main.18092e10.js",
     "runtime-main.js.map": "/Plant-Passport-App/static/js/runtime-main.18092e10.js.map",
     "static/js/2.b4cbcbe3.chunk.js": "/Plant-Passport-App/static/js/2.b4cbcbe3.chunk.js",
     "static/js/2.b4cbcbe3.chunk.js.map": "/Plant-Passport-App/static/js/2.b4cbcbe3.chunk.js.map",
     "index.html": "/Plant-Passport-App/index.html",
-    "precache-manifest.a19f7cab75d769398136239e0f024474.js": "/Plant-Passport-App/precache-manifest.a19f7cab75d769398136239e0f024474.js",
+    "precache-manifest.11bca82a6aa19987980d4d0dbde655a6.js": "/Plant-Passport-App/precache-manifest.11bca82a6aa19987980d4d0dbde655a6.js",
     "service-worker.js": "/Plant-Passport-App/service-worker.js",
-    "static/css/main.5c9520ad.chunk.css.map": "/Plant-Passport-App/static/css/main.5c9520ad.chunk.css.map",
+    "static/css/main.45254350.chunk.css.map": "/Plant-Passport-App/static/css/main.45254350.chunk.css.map",
     "static/js/2.b4cbcbe3.chunk.js.LICENSE.txt": "/Plant-Passport-App/static/js/2.b4cbcbe3.chunk.js.LICENSE.txt",
     "static/media/PassportsToPrint.scss": "/Plant-Passport-App/static/media/delete.66f739d1.svg",
     "static/media/flag-of-europe.svg": "/Plant-Passport-App/static/media/flag-of-europe.7b4534d2.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.18092e10.js",
     "static/js/2.b4cbcbe3.chunk.js",
-    "static/css/main.5c9520ad.chunk.css",
-    "static/js/main.cf2ecf96.chunk.js"
+    "static/css/main.45254350.chunk.css",
+    "static/js/main.3ff2eb0e.chunk.js"
   ]
 }
