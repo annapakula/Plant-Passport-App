@@ -7,10 +7,9 @@ Aplikacja została stworzona na potrzeby gospodarstwa ogrodniczego; służy do g
 - ✅ Dodawanie odmian do jednego paszportu
 - ✅ Poprawienie drukowania
 - Edycja poszczególnych paszportów
-- LocalSession
+- LocalStorage
 - API
 - Id samo się uzupełnia po wpisaniu rośliny
 - Alert - czy na pewno chcesz usunąć wszystko?
 - Wygląd
-- Copyrights
 - Poprawne README
