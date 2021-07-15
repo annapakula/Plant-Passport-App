@@ -13,7 +13,7 @@ class App extends Component {
       plantName: "",
       plantVarieties: [],
       plantAmount: "",
-      plantId: "",
+      plantId: "ID A01/2021",
     },
     passportsList: [],
     actualPlantVariety: { varietyName: "", varietyAmount: "" },
@@ -24,7 +24,7 @@ class App extends Component {
     plant.value = "";
     plant.focus();
     document.getElementById("plantName").value = "";
-    document.getElementById("plantId").value = "";
+    document.getElementById("plantId").value = "ID A01/2021";
     document.getElementById("plantAmount").value = "";
     document.getElementById("varietyName").value = "";
     document.getElementById("varietyAmount").value = "";
@@ -34,7 +34,7 @@ class App extends Component {
         plantName: "",
         plantVarieties: [],
         plantAmount: "",
-        plantId: "",
+        plantId: "ID A01/2021",
       },
     });
   };
