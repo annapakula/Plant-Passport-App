@@ -27,6 +27,7 @@ const AddPassport = ({
           id="plantId"
           type="text"
           placeholder="Id"
+          value="ID A01/2021"
           onChange={handleChange}
         />
         <input
