@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Plant-Passport-App/static/css/main.871f0662.chunk.css",
-    "main.js": "/Plant-Passport-App/static/js/main.6cc3b3c1.chunk.js",
-    "main.js.map": "/Plant-Passport-App/static/js/main.6cc3b3c1.chunk.js.map",
+    "main.js": "/Plant-Passport-App/static/js/main.6b201d5c.chunk.js",
+    "main.js.map": "/Plant-Passport-App/static/js/main.6b201d5c.chunk.js.map",
     "runtime-main.js": "/Plant-Passport-App/static/js/runtime-main.18092e10.js",
     "runtime-main.js.map": "/Plant-Passport-App/static/js/runtime-main.18092e10.js.map",
     "static/js/2.ca84aef1.chunk.js": "/Plant-Passport-App/static/js/2.ca84aef1.chunk.js",
     "static/js/2.ca84aef1.chunk.js.map": "/Plant-Passport-App/static/js/2.ca84aef1.chunk.js.map",
     "index.html": "/Plant-Passport-App/index.html",
-    "precache-manifest.3517c271c45dd6dd4a58b960d0ff416c.js": "/Plant-Passport-App/precache-manifest.3517c271c45dd6dd4a58b960d0ff416c.js",
+    "precache-manifest.61af9c951f875ac753bcc89366b8ae78.js": "/Plant-Passport-App/precache-manifest.61af9c951f875ac753bcc89366b8ae78.js",
     "service-worker.js": "/Plant-Passport-App/service-worker.js",
     "static/css/main.871f0662.chunk.css.map": "/Plant-Passport-App/static/css/main.871f0662.chunk.css.map",
     "static/js/2.ca84aef1.chunk.js.LICENSE.txt": "/Plant-Passport-App/static/js/2.ca84aef1.chunk.js.LICENSE.txt",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.18092e10.js",
     "static/js/2.ca84aef1.chunk.js",
     "static/css/main.871f0662.chunk.css",
-    "static/js/main.6cc3b3c1.chunk.js"
+    "static/js/main.6b201d5c.chunk.js"
   ]
 }
