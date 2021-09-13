@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Plant-Passport-App/precache-manifest.5371dbfafedf9a6ba4d4dcae75f8e4fb.js"
+  "/Plant-Passport-App/precache-manifest.5a5d6cb90bdd8e93ae7c195fd4e6ca97.js"
 );
 
 self.addEventListener('message', (event) => {
