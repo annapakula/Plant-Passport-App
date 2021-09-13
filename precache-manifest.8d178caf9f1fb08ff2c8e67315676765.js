@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "090b8d20d8beebb5cbb5160205ffbffe",
+    "revision": "c277ca108aacfda8a1378160aa7b2d93",
     "url": "/Plant-Passport-App/index.html"
   },
   {
-    "revision": "ea125e956a190640aea7",
+    "revision": "51c3ddbd816e164452eb",
     "url": "/Plant-Passport-App/static/css/main.871f0662.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Plant-Passport-App/static/js/2.25ab7ee2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ea125e956a190640aea7",
-    "url": "/Plant-Passport-App/static/js/main.9a2e11ab.chunk.js"
+    "revision": "51c3ddbd816e164452eb",
+    "url": "/Plant-Passport-App/static/js/main.6d1d2ba3.chunk.js"
   },
   {
     "revision": "fd0ea2737e2b5a2fe65e",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Plant-Passport-App/static/media/flag-of-europe.7b4534d2.svg"
   },
   {
-    "revision": "6d71f8376efcf1c822bf7194dd878ed6",
-    "url": "/Plant-Passport-App/static/media/nazwa-gatunkowa.6d71f837.txt"
+    "revision": "ce575b5ff73a6a6b094c7344b79e6610",
+    "url": "/Plant-Passport-App/static/media/nazwa-gatunkowa.ce575b5f.txt"
   },
   {
     "revision": "cbcc1eafe7b4e3451e984168c2e2a323",
