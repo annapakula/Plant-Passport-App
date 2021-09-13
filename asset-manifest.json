@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Plant-Passport-App/static/css/main.871f0662.chunk.css",
-    "main.js": "/Plant-Passport-App/static/js/main.4b86f49f.chunk.js",
-    "main.js.map": "/Plant-Passport-App/static/js/main.4b86f49f.chunk.js.map",
+    "main.js": "/Plant-Passport-App/static/js/main.262576f7.chunk.js",
+    "main.js.map": "/Plant-Passport-App/static/js/main.262576f7.chunk.js.map",
     "runtime-main.js": "/Plant-Passport-App/static/js/runtime-main.18092e10.js",
     "runtime-main.js.map": "/Plant-Passport-App/static/js/runtime-main.18092e10.js.map",
-    "static/js/2.917d7751.chunk.js": "/Plant-Passport-App/static/js/2.917d7751.chunk.js",
-    "static/js/2.917d7751.chunk.js.map": "/Plant-Passport-App/static/js/2.917d7751.chunk.js.map",
+    "static/js/2.25ab7ee2.chunk.js": "/Plant-Passport-App/static/js/2.25ab7ee2.chunk.js",
+    "static/js/2.25ab7ee2.chunk.js.map": "/Plant-Passport-App/static/js/2.25ab7ee2.chunk.js.map",
     "index.html": "/Plant-Passport-App/index.html",
-    "precache-manifest.264a54af6b8101c6ae7475665ac2babe.js": "/Plant-Passport-App/precache-manifest.264a54af6b8101c6ae7475665ac2babe.js",
+    "precache-manifest.22f70d172905514c21e440429a7e193f.js": "/Plant-Passport-App/precache-manifest.22f70d172905514c21e440429a7e193f.js",
     "service-worker.js": "/Plant-Passport-App/service-worker.js",
     "static/css/main.871f0662.chunk.css.map": "/Plant-Passport-App/static/css/main.871f0662.chunk.css.map",
-    "static/js/2.917d7751.chunk.js.LICENSE.txt": "/Plant-Passport-App/static/js/2.917d7751.chunk.js.LICENSE.txt",
+    "static/js/2.25ab7ee2.chunk.js.LICENSE.txt": "/Plant-Passport-App/static/js/2.25ab7ee2.chunk.js.LICENSE.txt",
     "static/media/delete.svg": "/Plant-Passport-App/static/media/delete.31370d97.svg",
     "static/media/flag-of-europe.svg": "/Plant-Passport-App/static/media/flag-of-europe.7b4534d2.svg",
     "static/media/nazwa-gatunkowa.txt": "/Plant-Passport-App/static/media/nazwa-gatunkowa.6d71f837.txt",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.18092e10.js",
-    "static/js/2.917d7751.chunk.js",
+    "static/js/2.25ab7ee2.chunk.js",
     "static/css/main.871f0662.chunk.css",
-    "static/js/main.4b86f49f.chunk.js"
+    "static/js/main.262576f7.chunk.js"
   ]
 }
