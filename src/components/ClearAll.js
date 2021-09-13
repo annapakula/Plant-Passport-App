@@ -3,7 +3,7 @@ import React from "react";
 const ClearAll = ({ handleClearAll }) => {
   return (
     <button
-      className="button passports__button--clear no-print"
+      className="button-warning no-print"
       id="button-clear"
       onClick={handleClearAll}
     >

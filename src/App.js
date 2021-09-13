@@ -1,147 +1,75 @@
-import React, { Component } from "react";
-import "./styles/App.scss";
+import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import "./styles/App.scss";
 import AddPassport from "./components/AddPassport";
+import PassportsToPrint from "./components/PassportsToPrint";
 import Print from "./components/Print";
 import ClearAll from "./components/ClearAll";
-import PassportsToPrint from "./components/PassportsToPrint";
 
-class App extends Component {
-  state = {
-    actualPassport: {
-      id: "",
-      plantName: "",
-      plantVarieties: [],
-      plantAmount: "",
-      plantId: "ID A01/2021",
-    },
-    passportsList: [],
-    actualPlantVariety: { varietyName: "", varietyAmount: "" },
-  };
+const App = () => {
+    const [plants, setPlants] = useState([]);
+    const year = new Date().getFullYear();
 
-  clearForm = () => {
-    const plant = document.getElementById("plantName");
-    plant.value = "";
-    plant.focus();
-    document.getElementById("plantName").value = "";
-    document.getElementById("plantId").value = "ID A01/2021";
-    document.getElementById("plantAmount").value = "";
-    document.getElementById("varietyName").value = "";
-    document.getElementById("varietyAmount").value = "";
-    this.setState({
-      actualPassport: {
-        id: "",
-        plantName: "",
-        plantVarieties: [],
-        plantAmount: "",
-        plantId: "ID A01/2021",
-      },
-    });
-  };
+    const addPlant = (id, name, variety, amount) => {
+        const newPlant = plants.find(plant => plant.name === name);
 
-  handleChange = (e) => {
-    const actualInput = e.target.id;
+        if (newPlant) {
+            newPlant.varieties.push({ id: uuidv4(), name: variety, amount });
 
-    this.setState({
-      actualPassport: {
-        ...this.state.actualPassport,
-        [actualInput]:
-          actualInput === "plantName"
-            ? e.target.value
-              ? e.target.value[0].toUpperCase() + e.target.value.slice(1)
-              : ""
-            : e.target.value,
-      },
-    });
-  };
-  handleChangeActualVariety = (e) => {
-    const actualInput = e.target.id;
-    this.setState({
-      actualPlantVariety: {
-        ...this.state.actualPlantVariety,
-        [actualInput]: e.target.value,
-      },
-    });
-  };
-  handleAddVariety = (e) => {
-    e.preventDefault();
-    console.log(this.state.actualPlantVariety.varietyName);
+            const updatedPlants = plants.map(plant => {
+                if (plant.name === name) plant = newPlant;
+                return plant;
+            });
 
-    this.setState({
-      actualPassport: {
-        ...this.state.actualPassport,
-        plantVarieties: [
-          ...this.state.actualPassport.plantVarieties,
-          this.state.actualPlantVariety,
-        ],
-      },
-    });
-    document.getElementById("varietyName").value = "";
-    document.getElementById("varietyAmount").value = "";
-    this.setState({
-      actualPlantVariety: { varietyName: "", varietyAmount: "" },
-    });
-  };
-  handleAddPlant = (e) => {
-    e.preventDefault();
-    this.setState((prevState) => {
-      const actualPassport = { ...prevState.actualPassport, id: uuidv4() };
-      const passportsList = [...prevState.passportsList, actualPassport];
-      return { passportsList };
-    });
-    this.clearForm();
-  };
+            setPlants(updatedPlants);
+        } else {
+            setPlants([...plants, { id: uuidv4(), plantId: id, name, varieties: [{ id: uuidv4(), name: variety, amount }] }]);
+        }
 
-  handleClearAll = () => {
-    this.setState({
-      passportsList: [],
-    });
-  };
+    };
+    const handleDeleteVariety = (idToDelete) => {
+        const updatedPlants = plants.filter(plant => {
+            plant.varieties = plant.varieties.filter(variety => variety.id !== idToDelete);
+            return plant.varieties.length > 0;
+        });
+        setPlants(updatedPlants);
+    }
+    const handleDeletePassport = (idToDelete) => {
+        const updatedPlants = plants.filter(plant => plant.id !== idToDelete);
+        setPlants(updatedPlants);
+    }
+    const handleClearAll = () => {
+		setPlants([]);
+	};
+	const handlePrint = () => {
+		window.print();
+		return false;
+	};
 
-  handlePrint = () => {
-    window.print();
-    return false;
-  };
-
-  handleDeletePassport = (id) => {
-    this.setState((prevState) => {
-      const passportsList = [...prevState.passportsList].filter(
-        (passport) => passport.id !== id
-      );
-      return { passportsList };
-    });
-  };
-
-  componentDidMount() {
-    document.getElementById("plantName").focus();
-  }
-
-  render() {
     return (
-      <main className="App">
-        <div className="App__box">
-          <AddPassport
-            handleChange={this.handleChange}
-            handleAddPlant={this.handleAddPlant}
-            handleAddVariety={this.handleAddVariety}
-            handleChangeActualVariety={this.handleChangeActualVariety}
-            actualPassport={this.state.actualPassport}
-          />
-          <br />
-          <section className="passports">
-            <Print handlePrint={this.handlePrint} />
-            <ClearAll handleClearAll={this.handleClearAll} />
-            <hr className="no-print" />
-            <PassportsToPrint
-              passportsList={this.state.passportsList}
-              handleDeletePassport={this.handleDeletePassport}
-            />
-          </section>
-        </div>
-        <footer className="footer no-print">Copyright © 2020 Anna Pakuła</footer>
-      </main>
+        <main className="App">
+            <div className="App__box">
+                <AddPassport
+                    addPlant={addPlant}
+                />
+                <br />
+                <section className="App__passports">
+                    <div className="App__buttons">
+                        <Print handlePrint={handlePrint} />
+    					<ClearAll handleClearAll={handleClearAll} />
+                    </div>
+                    <hr className="no-print" />
+                    <PassportsToPrint
+                        plants={plants}
+                        handleDeleteVariety={handleDeleteVariety}
+                        handleDeletePassport={handleDeletePassport} />
+                </section>
+            </div>
+            <footer className="App__footer no-print">
+                Copyright © {year} Anna Pakuła
+            </footer>
+        </main>
     );
-  }
 }
 
 export default App;

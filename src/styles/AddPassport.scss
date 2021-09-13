@@ -1,38 +1,19 @@
-.add-passport{
+.AddPassport{
   &__header {
     font-weight: 600;
   }
-  &__form {
-    // display: flex;
-    // align-items: center;
-    // flex-wrap: wrap;
+  &__error {
+    color: red;
+    font-size: smaller;
   }
-  // &__button, &__input {
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
   &__input {
     padding: .5rem;
-    margin: 0 1rem 1rem 0;
+    margin-bottom: 1rem;
     
   }
-  &__button {
-    // width: 32px;
-    // font-size: 2rem;
-    // padding: 0;
-    // border: none;
-    // cursor: pointer;
-    // color: #fff;
-    // background: none;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-
-    // &::before {
-    //   content: '';
-    //   position: absolute;
-    //   background: green;
-    //   border-radius: 50%;
-    //   width: 32px;
-    //   height: 32px;
-    //   z-index: -1;
-    // }
-  }
+  &__button {}
 }

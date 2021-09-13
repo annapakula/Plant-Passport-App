@@ -1,80 +1,37 @@
 import React from "react";
-import flagOfEurope from "../images/flag-of-europe.svg";
 import "../styles/PassportsToPrint.scss";
 import DeletePassport from "./DeletePassport";
+import Passport from "./Passport";
 
-const PassportsToPrint = ({ passportsList, handleDeletePassport }) => {
-  // const handleCancelEdit = (id) => {};
-  // const handleConfirmEdit = () => {};
-  // const handleEditPassport = () => {};
-  // const varieties = passportsList.map(passport)
+const PassportsToPrint = ({ plants, handleDeleteVariety, handleDeletePassport }) => {
+    // const handleCancelEdit = (id) => {};
+    // const handleConfirmEdit = () => {};
+    // const handleEditPassport = () => {};
+    // const varieties = passportsList.map(passport)
 
-  return passportsList.map((passport) => {
-    return (
-      <div key={passport.id} className="PassportsToPrint">
-        {passport.plantVarieties.length !== 0 ? (
-          passport.plantVarieties.map((variety) => {
-            console.log(variety);
-            return (
-              <p className="passport__paragraph">
-                {passport.plantName} {variety.varietyName} &#160;{" "}
-                {variety.varietyAmount}szt.
-              </p>
-            );
-          })
-        ) : (
-          <p className="passport__paragraph">
-            {passport.plantName} &#160; {passport.plantAmount}szt.
-          </p>
-        )}
-        <div className="passport__box">
-          <div className="passport">
-            <table className="table">
-              <thead className="table__head">
-                <tr className="table__head-row">
-                  <th className="table__head-cell" colSpan="4">
-                    <img
-                      src={flagOfEurope}
-                      alt="Flag of Europe"
-                      className="table__flag"
+    return plants.map((plant) => {
+        return (
+            <div key={plant.id} className="PassportsToPrint print">
+                {plant.varieties.map((variety) => {
+                    return (
+                        <p key={`${Math.floor(Math.random(100) * 1000000)}-${plant.id}`} className="Passport__paragraph">
+                            {plant.name} {variety.name} &#160;{" "}
+                            {variety.amount} {variety.amount ? "szt." : ""}
+                            <button className="PassportsToPrint__button no-print" onClick={() => handleDeleteVariety(variety.id)}>X</button>
+                        </p>
+                    );
+                })}
+                <div className="Passport__box">
+                    <Passport plant={plant} />
+                    <DeletePassport
+                        handleDeletePassport={() => handleDeletePassport(plant.id)}
                     />
-                    <h3 className="table__header">
-                      Paszport Roślin &#92; Plant Passport
-                    </h3>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className="table__cell table__cell--letter">A</td>
-                  <td className="table__cell table__cell--data">
-                    {passport.plantName}
-                  </td>
-                  <td className="table__cell table__cell--letter">B</td>
-                  <td className="table__cell table__cell--data">
-                    PL-18/62/5804
-                  </td>
-                </tr>
-                <tr>
-                  <td className="table__cell table__cell--letter">C</td>
-                  <td className="table__cell table__cell--data">
-                    {passport.plantId}
-                  </td>
-                  <td className="table__cell table__cell--letter">D</td>
-                  <td className="table__cell table__cell--data">PL</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <DeletePassport
-            handleDeletePassport={() => handleDeletePassport(passport.id)}
-          />
-        </div>
+                </div>
 
-        {/* <button className="no-print" onClick={handleEditPassport(passport.id)}>
+                {/* <button className="no-print" onClick={handleEditPassport(passport.id)}>
           Edytuj
         </button> */}
-        {/* 
+                {/* 
         <form
           className="edit-passport__form"
           id={"edit-" + passport.id}
@@ -116,9 +73,9 @@ const PassportsToPrint = ({ passportsList, handleDeletePassport }) => {
             Anuluj
           </button>
         </form> */}
-      </div>
-    );
-  });
+            </div>
+        );
+    });
 };
 
 export default PassportsToPrint;

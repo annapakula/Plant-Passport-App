@@ -17,10 +17,9 @@ code {
 }
 
 @media print {
+  @page { margin: 0; }
+  .no-print { display: none; }
   .App {
     color: #000;
-  }
-  .no-print {
-    display: none;
   }
 }

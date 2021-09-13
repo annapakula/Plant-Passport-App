@@ -2,8 +2,21 @@
   width: 100%;
   break-inside: avoid-page;
   padding: 1rem;
+  box-sizing: border-box;
   &:hover {
     background: rgba(8, 6, 17, 0.267);
+  }
+  &__button {
+    width: 15px;
+    height: 15px;
+    padding: unset;
+    background: none;
+    // border: 1px solid #da1e4d;
+    border: none;
+    border-radius: 50%;
+    font-size: 8px;
+    color: #da1e4d;
+    cursor: pointer;
   }
 }
 .table {
@@ -39,7 +52,7 @@
   }
 }
 
-.passport {
+.Passport {
   width: 100%;
   padding: 1px;
   border: 1px solid black;
@@ -47,17 +60,29 @@
   &__paragraph {
     margin: 5px 0 4px;
   }
-  &__delete-button {
-    margin-left: 18px;
-    width: 32px;
-    height: 32px;
-    background: url('../icons/delete.svg') center center no-repeat;
-    border: none;
-    cursor: pointer;
-  }
   &__box {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.DeletePassport {
+  &__button {
+    width: 40px;
+    height: 40px;
+    margin-left: 14px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon {
+    width: 18px;
+  }
+}
+
+@media print {
+  @page { margin: 0; }
+  .no-print { display: none; }
 }

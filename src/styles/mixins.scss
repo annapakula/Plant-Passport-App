@@ -1,0 +1,16 @@
+@mixin button($color) {
+    padding: 2px 16px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    border: 2px solid $color;
+    background: rgba($color, .2);
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.25), 0px 2px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    transition: all .3s ease-in-out;
+    &:hover {
+      background: $color;
+      transition: all .3s ease-in-out;
+    }
+}
