@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c277ca108aacfda8a1378160aa7b2d93",
+    "revision": "25ef2ae588bf6b8972e1d0664398c3c4",
     "url": "/Plant-Passport-App/index.html"
   },
   {
-    "revision": "51c3ddbd816e164452eb",
-    "url": "/Plant-Passport-App/static/css/main.871f0662.chunk.css"
+    "revision": "db445b7603d0af0efca0",
+    "url": "/Plant-Passport-App/static/css/main.d0476430.chunk.css"
   },
   {
     "revision": "fa04c62900080db7fc2b",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Plant-Passport-App/static/js/2.25ab7ee2.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "51c3ddbd816e164452eb",
-    "url": "/Plant-Passport-App/static/js/main.6d1d2ba3.chunk.js"
+    "revision": "db445b7603d0af0efca0",
+    "url": "/Plant-Passport-App/static/js/main.b0facac0.chunk.js"
   },
   {
     "revision": "fd0ea2737e2b5a2fe65e",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Plant-Passport-App/static/media/delete.31370d97.svg"
   },
   {
-    "revision": "7b4534d284b8ca4889f4c4d8b56d1f9c",
-    "url": "/Plant-Passport-App/static/media/flag-of-europe.7b4534d2.svg"
+    "revision": "e9c22ca8375916cd074a8bfe68f396fa",
+    "url": "/Plant-Passport-App/static/media/flag-of-europe.e9c22ca8.svg"
   },
   {
     "revision": "ce575b5ff73a6a6b094c7344b79e6610",
