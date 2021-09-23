@@ -6,9 +6,9 @@ Aplikacja została stworzona na potrzeby gospodarstwa ogrodniczego; służy do g
 - ✅ Usuwanie poszczególnych paszportów
 - ✅ Dodawanie odmian do jednego paszportu
 - ✅ Poprawienie drukowania
+- ✅ Pobieranie nazw roślin z pliku
 - Edycja poszczególnych paszportów
 - LocalStorage
-- API
 - Id samo się uzupełnia po wpisaniu rośliny
 - Alert - czy na pewno chcesz usunąć wszystko?
 - Wygląd

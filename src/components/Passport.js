@@ -14,7 +14,9 @@ const Passport = ({ plant }) => {
                       className="table__flag"
                     />
                     <h3 className="table__header">
-                      Paszport Roślin &#92; Plant Passport
+                      Paszport Roślin
+                      <br />
+                      Plant Passport
                     </h3>
                   </th>
                 </tr>
@@ -25,6 +27,8 @@ const Passport = ({ plant }) => {
                   <td className="table__cell table__cell--data">
                     {plant.name}
                   </td>
+                </tr>
+                <tr>
                   <td className="table__cell table__cell--letter">B</td>
                   <td className="table__cell table__cell--data">
                     PL-18/62/5804
@@ -35,6 +39,8 @@ const Passport = ({ plant }) => {
                   <td className="table__cell table__cell--data">
                     {plant.plantId}
                   </td>
+                </tr>
+                <tr>
                   <td className="table__cell table__cell--letter">D</td>
                   <td className="table__cell table__cell--data">PL</td>
                 </tr>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../styles/AddPassport.scss";
 // import gatunki from "../gatunki.json"
 // import odmiany from "../odmiany.json"
@@ -12,9 +12,9 @@ const AddPassport = ({ addPlant }) => {
 	const [amount, setAmount] = useState("");
 	const [error, setError] = useState("");
 	// const plants = gatunki.map(plant => plant.name);
-	let nameInput = document.querySelector("#plantName");
-	const [plantsNames, setPlantsNames] = useState([]);
-	const [plantsVarieties, setPlantsVarieties] = useState([]);
+	const nameRef = useRef("");
+	const [plantsNames, setPlantsNames] = useState(null);
+	const [plantsVarieties, setPlantsVarieties] = useState(null);
 
 	function fetchFromTxt(txt, callback) {
 		fetch(txt)
@@ -22,23 +22,22 @@ const AddPassport = ({ addPlant }) => {
         .then(text => {
 			const decoder = new TextDecoder("UTF-8");
 			const decoded = decoder.decode(text);
-			callback(
-				decoded.split('\r\n')
+			
+			const splitted = decoded.split('\r\n')
 				.map(el => el.match(/[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż'.() ]+/g) )
 				.sort()
-				.map((el,i) => <option key={ i } value={ el } />)
-				.flat()
-			);
+				// .map((el,i) => <option key={ i } value={ el } />)
+				// .flat();
+			
+			callback(splitted);
         })
         .catch(error => {
 			console.log(error)
         });
 	}
-	console.log(plantsNames)
 	
     useEffect(() => {
-		nameInput = document.querySelector("#plantName");
-        nameInput.focus();
+        nameRef.current.focus();
 		fetchFromTxt(gatunki, setPlantsNames);
 		fetchFromTxt(odmiany, setPlantsVarieties);
     }, []);
@@ -68,7 +67,7 @@ const AddPassport = ({ addPlant }) => {
 		if(id && name) {
 			addPlant(id, name, variety, amount);
 			resetInputs();
-			nameInput.focus();
+			nameRef.current.focus();
 		} else {
 			setError("Nazwa rośliny oraz id muszą być podane");
 		}
@@ -81,6 +80,7 @@ const AddPassport = ({ addPlant }) => {
 			<form className="AddPassport__form" action="">
 				<input
 					className="AddPassport__input"
+					ref={nameRef}
 					id="plantName"
 					list="plants-list"
 					type="text"
@@ -88,7 +88,7 @@ const AddPassport = ({ addPlant }) => {
 					value={name}
 					onChange={handleChange}
 					required />
-                <datalist id="plants-list">{ plantsNames }</datalist>
+                <datalist id="plants-list">{ plantsNames && plantsNames[0].map((el,i) => <option key={ i } value={ el } />) }</datalist>
 				<input
 					className="AddPassport__input"
 					id="plantVariety"
@@ -98,7 +98,7 @@ const AddPassport = ({ addPlant }) => {
 					value={variety}
 					onChange={handleChange}
 				/>
-                <datalist id="varieties-list">{ plantsVarieties }</datalist>
+                <datalist id="varieties-list">{ plantsVarieties && plantsVarieties[0].map((el,i) => <option key={ i } value={ el } /> ) }</datalist>
 				<input
 					className="AddPassport__input"
 					id="plantAmount"
@@ -113,7 +113,6 @@ const AddPassport = ({ addPlant }) => {
 					id="plantId"
 					type="text"
 					placeholder="Id*"
-					value="ID A01/2021"
 					value={id}
 					onChange={handleChange}
 					required
