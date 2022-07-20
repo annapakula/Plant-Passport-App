@@ -51,6 +51,7 @@ const App = () => {
             <div className="App__box">
                 <AddPassport
                     addPlant={addPlant}
+                    year={year}
                 />
                 <br />
                 <section className="App__passports">

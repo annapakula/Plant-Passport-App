@@ -5,8 +5,8 @@ import "../styles/AddPassport.scss";
 import gatunki from "../nazwa-gatunkowa.txt";
 import odmiany from "../nazwa-odmianowa.txt";
 
-const AddPassport = ({ addPlant }) => {
-	const [id, setId] = useState("ID A01/2021");
+const AddPassport = ({ addPlant, year }) => {
+	const [id, setId] = useState(`ID A01/${year}`);
 	const [name, setName] = useState("");
 	const [variety, setVariety] = useState("");
 	const [amount, setAmount] = useState("");
