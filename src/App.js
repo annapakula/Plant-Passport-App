@@ -35,7 +35,10 @@ const App = () => {
         setPlants(updatedPlants);
     }
     const handleDeletePassport = (idToDelete) => {
-        const updatedPlants = plants.filter(plant => plant.id !== idToDelete);
+        const updatedPlants = plants.map(plant => {
+            plant.varieties = plant.varieties.filter(variete => variete.id !== idToDelete)
+            return plant
+        });
         setPlants(updatedPlants);
     }
     const handleClearAll = () => {

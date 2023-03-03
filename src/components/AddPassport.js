@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../styles/AddPassport.scss";
-// import gatunki from "../gatunki.json"
-// import odmiany from "../odmiany.json"
 import gatunki from "../nazwa-gatunkowa.txt";
 import odmiany from "../nazwa-odmianowa.txt";
 
@@ -11,7 +9,6 @@ const AddPassport = ({ addPlant, year }) => {
 	const [variety, setVariety] = useState("");
 	const [amount, setAmount] = useState("");
 	const [error, setError] = useState("");
-	// const plants = gatunki.map(plant => plant.name);
 	const nameRef = useRef("");
 	const [plantsNames, setPlantsNames] = useState(null);
 	const [plantsVarieties, setPlantsVarieties] = useState(null);
@@ -24,12 +21,11 @@ const AddPassport = ({ addPlant, year }) => {
 			const decoded = decoder.decode(text);
 			
 			const splitted = decoded.split('\r\n')
-				.map(el => el.match(/[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż'.() ]+/g) )
+				.map(el => el.match(/[A-Za-zĄąĆćĘęŁłŃńÓóŚśŹźŻż'.() ]+/g).flat() )
 				.sort()
-				// .map((el,i) => <option key={ i } value={ el } />)
-				// .flat();
+				
 			
-			callback(splitted);
+				callback(splitted);
         })
         .catch(error => {
 			console.log(error)
@@ -88,7 +84,7 @@ const AddPassport = ({ addPlant, year }) => {
 					value={name}
 					onChange={handleChange}
 					required />
-                <datalist id="plants-list">{ plantsNames && plantsNames[0].map((el,i) => <option key={ i } value={ el } />) }</datalist>
+                <datalist id="plants-list">{ plantsNames && plantsNames.map((el,i) => <option key={ i } value={ el } />) }</datalist>
 				<input
 					className="AddPassport__input"
 					id="plantVariety"
@@ -98,7 +94,7 @@ const AddPassport = ({ addPlant, year }) => {
 					value={variety}
 					onChange={handleChange}
 				/>
-                <datalist id="varieties-list">{ plantsVarieties && plantsVarieties[0].map((el,i) => <option key={ i } value={ el } /> ) }</datalist>
+                <datalist id="varieties-list">{ plantsVarieties && plantsVarieties.map((el,i) => <option key={ i } value={ el } /> ) }</datalist>
 				<input
 					className="AddPassport__input"
 					id="plantAmount"
