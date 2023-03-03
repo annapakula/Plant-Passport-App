@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Plant-Passport-App/static/css/main.e86fd9cb.css",
-    "main.js": "/Plant-Passport-App/static/js/main.ca0109ef.js",
+    "main.js": "/Plant-Passport-App/static/js/main.faa7306c.js",
     "static/media/nazwa-odmianowa.txt": "/Plant-Passport-App/static/media/nazwa-odmianowa.8afdd91576af9a4aa931.txt",
     "static/media/nazwa-gatunkowa.txt": "/Plant-Passport-App/static/media/nazwa-gatunkowa.f1bdb4d4ccaf7cb557c8.txt",
     "static/media/flag-of-europe.svg": "/Plant-Passport-App/static/media/flag-of-europe.e2c678fc6879814cb17e49b00acd25c1.svg",
     "index.html": "/Plant-Passport-App/index.html",
     "static/media/delete.svg": "/Plant-Passport-App/static/media/delete.ccfedbd8eab2674ef48bc638d8d072de.svg",
     "main.e86fd9cb.css.map": "/Plant-Passport-App/static/css/main.e86fd9cb.css.map",
-    "main.ca0109ef.js.map": "/Plant-Passport-App/static/js/main.ca0109ef.js.map"
+    "main.faa7306c.js.map": "/Plant-Passport-App/static/js/main.faa7306c.js.map"
   },
   "entrypoints": [
     "static/css/main.e86fd9cb.css",
-    "static/js/main.ca0109ef.js"
+    "static/js/main.faa7306c.js"
   ]
 }
